@@ -1,0 +1,11 @@
+[Unit]
+Description=Payback Coupons taeglich aktivieren
+
+[Timer]
+# Taeglich um 08:00 Uhr (+ bis zu 1h zufaelliger Versatz, um Lastspitzen zu vermeiden)
+OnCalendar=*-*-* 08:00:00
+RandomizedDelaySec=3600
+Persistent=true
+
+[Install]
+WantedBy=timers.target

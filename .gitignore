@@ -1,0 +1,10 @@
+# Niemals Zugangsdaten committen!
+.env
+# Screenshots / Debug-Artefakte
+screenshots/
+*.png
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/

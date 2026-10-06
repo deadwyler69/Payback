@@ -1,0 +1,14 @@
+[Unit]
+Description=Payback Coupons automatisch aktivieren
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+# Pfade anpassen:
+WorkingDirectory=/opt/payback
+EnvironmentFile=/opt/payback/.env
+ExecStart=/opt/payback/.venv/bin/python /opt/payback/payback_coupons.py
+# Nicht als root laufen lassen:
+User=payback
+Group=payback
