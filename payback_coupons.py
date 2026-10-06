@@ -360,7 +360,7 @@ def run(debug: bool, dry_run: bool) -> int:
 
     with sync_playwright() as p:
         launch_kwargs = {"headless": not debug}
-        exe = os.environ.get("PLAYWRIGHT_CHROMIUM_EXECUTABLE")
+        exe = os.environ.get("PAYBACK_CHROMIUM_EXECUTABLE")
         if exe:
             launch_kwargs["executable_path"] = exe
         browser = p.chromium.launch(**launch_kwargs)
